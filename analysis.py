@@ -7,8 +7,8 @@ from streamlit_extras.stateful_button import button
 
 @st.cache_resource
 def load():
-    tokenizer = AutoTokenizer.from_pretrained("/home/jbasa/Desktop/Jero/SA/tokenizer/")
-    model = AutoModelForSequenceClassification.from_pretrained("/home/jbasa/Desktop/Jero/SA/model/")
+    tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
+    model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
     return tokenizer, model
 
 tokenizer, model = load()
